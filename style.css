@@ -1,0 +1,117 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --text-color-blur: #323238;
+    --text-color-focus: #FFFFFF;
+    --btn-color-blur: #E1E1E6;
+    --btn-color-focus: #464e50;
+
+    font-size: clamp(40%, 2vw + 1%, 62.5%);
+}
+
+body {
+    display: grid;
+    height: 100vh;
+    place-items: center;
+}
+
+.running .ph-play-circle,
+html:not(.running) .ph-pause-circle,
+html:not(.running) #stop {
+    display: none;
+}
+
+main {
+    display: flex;
+    align-items: center;
+    gap: 19.2rem;
+    padding-inline: 8rem;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.timer {
+    display: flex;
+    font-size: 12.6rem;
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    color: var(--text-color-blur);
+}
+
+.controls {
+    display: flex;
+    gap: 4rem;
+    justify-content: center;
+
+    & button {
+        border: none;
+        font-size: 4rem;
+        background: none;
+        color: var(--text-color-blur);
+        cursor: pointer;
+    }
+}
+
+.themes {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3.2rem;
+
+    & button {
+        border: none;
+        background-color: var(--btn-color-blur);
+        color: var(--text-color-blur);
+        font-size: 4.8rem;
+        padding: 4rem;
+        border-radius: 2.4rem;
+        cursor: pointer;
+    }
+}
+
+.themes>button:hover {
+    background-color: #b2b2bb;
+}
+
+.themes>button.active {
+    background-color: var(--btn-color-focus);
+    color: var(--btn-color-blur);
+}
+
+@media (max-width: 1000px) {
+    main {
+        flex-direction: column;
+        gap: 10rem;
+    }
+}
+
+.forest {
+    & body {
+        background: linear-gradient(220deg, rgb(7, 104, 7) 0%, rgba(76, 190, 76, 0.701) 100%);
+    }
+}
+
+.rain {
+    & body {
+        background: linear-gradient(220deg, rgba(34, 56, 139, 1) 0%, rgba(48, 90, 177, 0.7006960556844548) 100%);
+    }
+}
+
+.cafe {
+    & body {
+        background: linear-gradient(220deg, rgba(119, 113, 113, 1) 0%, rgba(46, 45, 45, 1) 100%);
+    }
+}
+
+.fireplace {
+    & body {
+        background: linear-gradient(220deg, rgba(196, 74, 17, 1) 0%, rgba(179, 79, 51, 1) 100%);
+    }
+}

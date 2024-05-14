@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br" class="">
+
+<head>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Focus Timer 2.0</title>
+
+    <link rel="stylesheet" href="style.css">
+    <script type="module" src="./src/main.js" defer></script>
+
+    <script src="https://unpkg.com/@phosphor-icons/web" defer></script>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+
+</head>
+
+<body>
+    <main>
+        <div class="container">
+            <div class="timer">
+                <span id="minutes">00</span>
+                <span>:</span>
+                <span id="seconds">00</span>
+            </div>
+            <div class="controls">
+                <button id="toggleRunning" class="ph ph-play-circle"></button>
+                <button id="toggleRunning" class="ph ph-pause-circle"></button>
+                <button id="stop" class="ph ph-stop-circle"></button>
+                <button id="plus" class="ph ph-plus-circle"></button>
+                <button id="minus" class="ph ph-minus-circle"></button>
+            </div>
+        </div>
+
+        <div class="themes">
+            <button id="forest" class="ph ph-tree-evergreen"></button>
+            <button id="rain" class="ph ph-cloud-snow"></button>
+            <button id="cafe" class="ph ph-storefront"></button>
+            <button id="fireplace" class="ph ph-fire"></button>
+        </div>
+
+    </main>
+
+</body>
+
+</html>
